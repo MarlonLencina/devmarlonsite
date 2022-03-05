@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
       <Background>
           <BackgroundWrapper>
             <ImageWrapper>
-                <Image alt='smartphone' src={'https://devmarlon.s3.sa-east-1.amazonaws.com/phonecontact.png'} width={'365p'} height={'250px'}/>
+                <Image alt='smartphone' src={'https://devmarlon.s3.sa-east-1.amazonaws.com/phonecontact.svg'} width={'365p'} height={'250px'}/>
             </ImageWrapper>
           </BackgroundWrapper>
       </Background>

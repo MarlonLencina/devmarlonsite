@@ -49,12 +49,16 @@ const Header: React.FC = () => {
                 </Link>
             </LinkNav>
             <Social>
+                <Link href={'https://www.github.com/marlonlencina'} passHref>
                 <OptionSocialWrapper>
                     <Icon icon="akar-icons:github-fill" />
                 </OptionSocialWrapper>
+                </Link>
+                <Link href={'https://www.linkedin.com/in/devmarlonlencina/'} passHref>
                 <OptionSocialWrapper>
                     <Icon icon="akar-icons:linkedin-fill" />
                 </OptionSocialWrapper>
+                </Link>
             </Social>
         </Nav>
         <ButtonMobile/>

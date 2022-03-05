@@ -61,7 +61,7 @@ const Home: NextPage = () => {
             <Platform>
               <PlatformImageWrapper>
                 <Image
-                src={'https://devmarlon.s3.sa-east-1.amazonaws.com/phone.png'} 
+                src={'https://devmarlon.s3.sa-east-1.amazonaws.com/phone.svg'} 
                 alt='Smartphone'
                 width={188}
                 height={300}
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
             </Platform>
             <Platform>
               <PlatformImageWrapper>
-                <Image alt='web' src={'https://devmarlon.s3.sa-east-1.amazonaws.com/web.png'} height={'280px'} width={'392px'} />
+                <Image alt='web' src={'https://devmarlon.s3.sa-east-1.amazonaws.com/web.svg'} height={'280px'} width={'392px'} />
               </PlatformImageWrapper>
               <PlatformInfo>
                 <h2>Sem esquecer <br />

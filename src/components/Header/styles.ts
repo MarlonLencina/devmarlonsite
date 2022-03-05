@@ -81,7 +81,7 @@ align-self: center;
 
 `
 
-export const OptionSocialWrapper = styled.div`
+export const OptionSocialWrapper = styled.a`
 
 height: 50px;
 width: 50px;
@@ -90,7 +90,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-& + div {
+& + a {
     margin-left: 4px;
 }
 
