@@ -5,8 +5,13 @@ interface PropsHeader {
     isScrolled: boolean
 }
 
+interface PropsSidevbar {
+    isOpen: boolean
+}
+
 export const Container = styled.div<PropsHeader>`
     transition: all .2s;
+
     ${props => 
 
         props.isScrolled ? css`
@@ -16,8 +21,8 @@ export const Container = styled.div<PropsHeader>`
         top: 0;
         right: 0;
         left: 0;
-        z-index: 2;
         border-bottom: 1px solid black;
+        z-index: 4;
     
         ` : css`
         
@@ -35,6 +40,14 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: relative;
+    z-index: 5;
+    background-color: ${props => props.theme.COLORS.cian};
+
+    @media (min-width: 720px){
+        background-color: transparent;
+    }
+
 `;
 
 export const LogoWrapper = styled.div`
@@ -105,11 +118,65 @@ export const ButtonMobile = styled.button`
 width: 40px;
 height: 40px;
 background-color: ${props => props.theme.COLORS.black};
-border-radius: 16px;
+border-radius: 12px;
 border-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
 
 @media (min-width: 720px){
         display: none;
     }
+
+`
+
+export const SidebarMobile = styled.div<PropsSidevbar>`
+
+width: 100%;
+height: 460px;
+background-color: ${props => props.theme.COLORS.purple};
+position: absolute;
+top: ${props => props.isOpen ? '85px' : '-460px'};
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 2;
+transition: all 1s;
+border-bottom: 1px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+
+@media (min-width: 720px){
+    display: none;
+}
+
+`
+
+export const NavMobile = styled.aside`
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+
+`
+
+export const NavMobileLinks = styled.aside`
+
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 24px;
+
+> a {
+    text-decoration: none;
+    color: ${props => props.theme.COLORS.black};
+    font-size: 20px;
+    & + a {
+        margin-top: 24px;
+    }
+}
 
 `
