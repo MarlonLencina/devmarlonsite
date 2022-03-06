@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             </MainText>
             <MainMidia>
               <ImageWrapper>
-                <Image src={'https://devmarlon.s3.sa-east-1.amazonaws.com/photodevmarlon.png'} alt="photo" height={'450px'} width={'450px'} />
+                <Image src={'https://devmarlon.s3.sa-east-1.amazonaws.com/photodevmarlon.png'} alt="photodevmarlon" height={'450px'} width={'450px'} />
               </ImageWrapper>
                 <MainInfo>
                     <span>Marlon Lencina</span>
