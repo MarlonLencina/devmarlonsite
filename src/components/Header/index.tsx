@@ -106,7 +106,12 @@ const Header: React.FC = () => {
             </Social>
         </Nav>
         <ButtonMobile onClick={handleSidebar}>
-            <Image alt='sidebar' src={'https://devmarlon.s3.sa-east-1.amazonaws.com/sidebar.svg'} height={'20px'} width={'23px'}/>
+            {
+                isOpen ? 
+                <Image alt='sidebar' src={isOpen ? 'https://devmarlon.s3.sa-east-1.amazonaws.com/x.svg': 'https://devmarlon.s3.sa-east-1.amazonaws.com/sidebar.svg'} height={'20px'} width={'23px'}/>
+                :
+                <Image alt='sidebar' src={isOpen ? 'https://devmarlon.s3.sa-east-1.amazonaws.com/sidebar.svg': 'https://devmarlon.s3.sa-east-1.amazonaws.com/sidebar.svg'} height={'20px'} width={'23px'}/>
+            }
         </ButtonMobile>
       </Wrapper>
   </Container>
