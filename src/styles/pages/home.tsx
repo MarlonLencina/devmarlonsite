@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {motion} from "framer-motion";
 
 export const Main = styled.main``
 
@@ -30,6 +31,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
+position: relative;
+
 
 @media (min-width: 720px){
     flex-direction: row;
@@ -38,7 +41,7 @@ justify-content: space-between;
 
 `
 
-export const MainText = styled.div`
+export const MainText = styled(motion.div)`
     max-width: 585px;
     text-align: justify;
     order: 2;
@@ -69,6 +72,15 @@ flex-direction: column;
 @media (min-width: 720px){
 flex-direction: row;
 }
+
+`
+
+export const MainImageWrapper = styled(motion.div)`
+
+margin-top: 12px;
+position: absolute;
+height: 105px;
+width: 105px;
 
 `
 

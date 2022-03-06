@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import {Icon as IconComponents} from '../components/Icon'
 import Logo from '../components/Logo'
-import { Main, MainBackground, MainWrapper, MainText, MainMidia, ImageWrapper, MainInfo, SectionInvite, InviteText, SectionInviteWrapper, InviteIconWrapper, SectionPlatforms, SectionPlatformsWrapper, Platform, PlatformImageWrapper, PlatformInfo, Footer, FooterWrapper, ButtonContact } from '../styles/pages/home'
+import { Main, MainBackground, MainWrapper, MainText, MainMidia, ImageWrapper, MainInfo, SectionInvite, InviteText, SectionInviteWrapper, InviteIconWrapper, SectionPlatforms, SectionPlatformsWrapper, Platform, PlatformImageWrapper, PlatformInfo, Footer, FooterWrapper, ButtonContact, MainImageWrapper } from '../styles/pages/home'
 
 const Home: NextPage = () => {
   return (
@@ -15,18 +15,29 @@ const Home: NextPage = () => {
       </Head>
       <Header/>
       <Main>
+
         <MainBackground/>
           <MainWrapper>
-            <MainText>
+            <MainText
+              initial={{ x: -300}}
+              animate={{ x: 0}}
+              transition={{ ease: 'easeInOut', duration: 1 }}
+              >
                 <h1>Dando vida,
                 através de codígo.</h1>
                 <span>
                 Sou um desenvolvedor focado no Front-end e com conhecimentos em Back-end também, Tenho interesse em Tecnologia desde cedo e já trabalhei com design UI/UX por um longo periodo de tempo antes de encontrar o desenvolvimento.
                 </span>
+                <MainImageWrapper
+                         animate={{ rotate: 360 }}
+                         transition={{ ease: "linear", duration: 3, repeat: Infinity }}
+                >
+                  <Image src={'https://devmarlon.s3.sa-east-1.amazonaws.com/badge.svg'} alt="photodevmarlon" height={'155px'} width={'155px'} layout={'responsive'}/>
+                </MainImageWrapper>
             </MainText>
             <MainMidia>
               <ImageWrapper>
-                <Image src={'https://devmarlon.s3.sa-east-1.amazonaws.com/photodevmarlon.png'} alt="photodevmarlon" height={'450px'} width={'451px'} />
+                <Image src={'https://devmarlon.s3.sa-east-1.amazonaws.com/photodevmarlon.png'} alt="photodevmarlon" height={'450px'} width={'451px'} layout={'responsive'}/>
               </ImageWrapper>
                 <MainInfo>
                     <span>Marlon Lencina</span>
