@@ -281,7 +281,7 @@ justify-content: space-between;
 export const ButtonContact = styled.a`
   border-style: none;
   text-decoration: none;
-  padding:  18px 90px;
+  padding:  18px 56px;
   background-color: ${props => props.theme.COLORS.cian};
   border-radius: 16px;
   font-weight: ${props => props.theme.FONTS.medium};
