@@ -1,4 +1,5 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/Header'
@@ -9,6 +10,9 @@ import { Main, MainBackground, MainWrapper, MainText, MainMidia, ImageWrapper, M
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>DevM - Home</title>
+      </Head>
       <Header/>
       <Main>
         <MainBackground/>

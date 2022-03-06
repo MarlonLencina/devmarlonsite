@@ -3,10 +3,14 @@ import React from 'react';
 import { Background, BackgroundWrapper, Container, Content, ImageWrapper, Option, Options } from '../styles/pages/contact';
 import { Icon } from '@iconify/react';
 import HeaderSimple from '../components/HeaderSimple';
+import Head from 'next/head';
 
 const Contact: React.FC = () => {
   return (
   <Container>
+      <Head>
+        <title>DevM - Contact</title>
+      </Head>
       <HeaderSimple/>
       <Background>
           <BackgroundWrapper>
